@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DNQ Motor</title>
+    <title>Semestre II</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -11,9 +11,7 @@
       rel="stylesheet"
     />
     <link rel="icon" href="img/DNQ-MOTOR-ROJO.ico" type="image/x-icon">
-
     <style>
-      /* Estilos para el header */
       header {
         position: fixed;
         top: 0;
@@ -24,10 +22,9 @@
         padding: 0px;
         transition: transform 0.3s; /* Agrega una transición suave para el desplazamiento */
       }
-      #texto-header{
+      #texto-header {
         border-left: 1px solid #fff; /* Línea vertical */
         padding-left: 20px; /* Espacio entre la línea y el contenido */
-
       }
       body {
         font-family: "Montserrat", sans-serif;
@@ -42,8 +39,6 @@
         justify-content: space-between; /* Alinear elementos en el espacio disponible */
         align-items: center; /* Centrar verticalmente los elementos en el header */
       }
-
-
 
       /* Estilos para el logo */
       #logo {
@@ -87,15 +82,16 @@
         display: flex;
         flex-direction: column;
         justify-content: center; /* Centrar verticalmente el contenido */
-        align-items: center; /* Centrar horizontalmente el contenido */
+        align-items: left; /* Centrar horizontalmente el contenido */
         padding: 100px 0;
-        background-color: #1a1a1a;
+        background-color: #282828;
       }
 
       #columna-izquierda h1 {
         font-size: 24px; /* Tamaño de fuente del encabezado */
         color: #ffffff; /* Color del texto del encabezado */
-        background-color: #1a1a1a;
+        background-color: #282828;
+        padding-left: 70px;
       }
 
       /* Estilos para la columna derecha (texto) */
@@ -119,13 +115,13 @@
         align-items: center; /* Centra verticalmente el contenido */
         gap: 20px; /* Espacio entr  e las columnas */
         padding: 70px 0;
-        background-color: #333;
+        background-color: #1a1a1a;
       }
 
       /* Estilos para la lista de objetivos a la izquierda */
       #objetivos-especificos-izq {
-        flex: 3; /* La lista toma el 75% del ancho disponible */
-        background-color: #333;
+        flex: 1; /* La lista toma el 75% del ancho disponible */
+        background-color: #1a1a1a;
         padding-left: 50px; /* Añade espacio a la izquierda de la lista */
         padding-right: 100px;
       }
@@ -134,53 +130,54 @@
         list-style: decimal; /* Numerar la lista */
         font-size: 16px; /* Tamaño de fuente de la lista */
         color: #ffffff; /* Color del texto de la lista */
-        background-color: #333;
+        background-color: #1a1a1a;
       }
 
       /* Estilos para el título "Objetivos Específicos" a la derecha */
       #objetivos-especificos-der {
         flex: 1; /* El título toma el 50% del ancho disponible */
         text-align: center; /* Alinea el texto al centro horizontalmente */
-        background-color: #333;
+        background-color: #1a1a1a;
       }
 
       #objetivos-especificos-der h1 {
         font-size: 24px; /* Tamaño de fuente del título */
         color: #ffffff; /* Color del texto del título */
-        background-color: #333;
+        background-color: #1a1a1a;
         padding-right: 50px;
       }
-
-      #acerca-de-mi {
-        text-align: center; /* Centra el contenido en el section */
-        padding: 40px 0; /* Añade espaciado superior e inferior para separar el contenido de otros elementos */
-        background-color: #282828;
-        padding-bottom: 100px;
-      }
-
-      .perfil {
+      /* Estilos para la sección */
+      #manejo-de-sesiones {
         display: flex;
-        flex-direction: column;
         align-items: center;
-      }
-
-      .foto-circular {
-        width: 300px; /* Personaliza el tamaño de la foto */
-        height: 300px; /* Ajusta el tamaño de la foto */
-        border-radius: 50%; /* Hace que la foto sea circular */
-        object-fit: cover; /* Ajusta el tamaño de la imagen para que se ajuste al círculo */
-        margin-bottom: 10px; /* Espaciado entre la foto y el nombre */
-      }
-
-      .perfil h1 {
-        margin: 0; /* Elimina el margen superior del nombre */
-        padding-top: 40px;
+        background-color: #262626;
         color: #ffffff;
+        padding-top: 50px;
+        padding-bottom: 50px;
       }
 
-      p {
-        text-align: center; /* Centra el párrafo */
-        color: #ffffff;
+      /* Estilos para el h1 (encabezado) */
+      #manejo-de-sesiones h1 {
+        flex: 1;
+        text-align: center;
+        padding-left: 70px;
+      }
+
+      /* Estilos para la galería de imágenes */
+      #galeria {
+        flex: 3;
+        text-align: center;
+      }
+
+      #galeria img {
+        max-width: 100%;
+        max-height: 500px;
+        display: none;
+        padding-left: 100px;
+      }
+
+      #galeria img:first-child {
+        display: block;
       }
       footer {
         background-color: #333;
@@ -212,35 +209,6 @@
         padding-left: 20px; /* Espacio entre la línea y el contenido */
         padding-right: 800px;
       }
-
-      #progreso {
-        text-align: center; /* Centrar el texto horizontalmente */
-        padding-top: 200px;
-        padding-bottom: 50px;
-        color: #ffffff;
-      }
-
-      /* Estilos para el contenedor de las columnas */
-      .row {
-        display: flex;
-        justify-content: space-around; /* Centrar horizontalmente las columnas */
-        align-items: center; /* Centrar verticalmente las columnas */
-        padding-bottom: 50px;
-      }
-
-      /* Estilos para cada columna */
-      .column {
-        flex: 1; /* Cada columna toma el mismo espacio disponible */
-        text-align: center; /* Centrar el texto horizontalmente en cada columna */
-        color: #ffffff;
-        padding: 20px; /* Agregar espacio alrededor del texto en cada columna */
-        background-color: #1d1d1d;
-        transition: background-color 0.3s; /* Color de fondo de las columnas (opcional) */
-        text-decoration: none;
-      }
-      .column:hover {
-        background-color: #710000; /* Cambia el color de fondo al pasar el mouse por encima */
-      }
     </style>
   </head>
   <body>
@@ -250,14 +218,13 @@
           <img src="img/DNQ MOTOR ROJO.png" alt="Logo de DNQMotor" />
         </a>
         <div id="texto-header">
-            <p>Portafolio</p>
-          </div>
+          <p>Portafolio</p>
+        </div>
       </div>
       <nav>
         <div id="menu">
           <ul>
             <li><a href="index.html">Inicio</a></li>
-
             <li><a href="#acerca-de-mi">Acerca de mí</a></li>
           </ul>
         </div>
@@ -265,82 +232,48 @@
     </header>
     <section id="objetivo-general">
       <div id="columna-izquierda">
-        <h1>DNQ Motor</h1>
-      </div>
-      <div id="columna-derecha">
-        <p>
-          Es una plataforma de comercio electrónico especializada en la venta de
-          repuestos para motos, con el propósito de ofrecer a los clientes una
-          amplia gama de productos de alta calidad, una experiencia de compra
-          segura y conveniente, y un servicio al cliente excepcional, con el fin
-          de convertirse en un referente confiable en el mercado de repuestos
-          para motos en línea.
-        </p>
+        <h1>Semestre 2</h1>
       </div>
     </section>
     <section id="objetivos-especificos">
       <div id="objetivos-especificos-izq">
         <ol>
-          <li>
-            Desarrollar el sitio web: Completar la construcción de la plataforma
-            en un plazo de 6 meses, incluyendo la selección de una plataforma de
-            comercio electrónico, diseño de la interfaz y configuración de las
-            funciones básicas.
-          </li>
-          <li>
-            Crear un catálogo inicial: Subir al menos 100 productos de repuestos
-            para motos en la plataforma antes del lanzamiento.
-          </li>
-          <li>
-            Establecer presencia en línea: Crear perfiles en las principales
-            redes sociales y un blog para generar presencia en línea antes del
-            lanzamiento.
-          </li>
-          <li>
-            Definir políticas y procesos: Establecer políticas de devolución,
-            garantía y envío, y desarrollar procedimientos internos para
-            gestionar las operaciones de la tienda en línea.
-          </li>
-          <li>
-            Seleccionar proveedores confiables: Identificar y establecer
-            relaciones con proveedores confiables de repuestos para motos que
-            ofrezcan productos de calidad.
-          </li>
-          <li>
-            Configurar sistemas de pago y envío: Integrar pasarelas de pago
-            seguras y establecer acuerdos con compañías de envío para garantizar
-            una experiencia de compra fluida y segura desde el inicio.
-          </li>
+          <li>En construcción :)</li>
         </ol>
       </div>
       <div id="objetivos-especificos-der">
-        <h1>Objetivos específicos</h1>
+        <h1>Criterios de evaluación</h1>
       </div>
     </section>
-    <section id="acerca-de-mi">
-      <div class="perfil">
-        <img src="img/foto perfil-min.jpg" alt="Foto" class="foto-circular" />
-        <div class="nombre">
-          <h1>Julián Felipe Quinche Cáceres</h1>
-        </div>
-      </div>
-      <p>
-        Tengo 23 años, fotográfo, estudiante en desarrollo y programación de software,
-        actualmente dirijo el diseño y gestión del proyecto DNQ Motor.
-      </p>
-      <h1 id="progreso">Progreso:</h1>
-      <div class="row">
-        <a href="semestre1.html" class="column">Semestre 1</a>
-        <a href="semestre2.html" class="column">Semestre 2</a>
-        <a href="semestre3.html" class="column">Semestre 3</a>
-        <a href="semestre4.html" class="column">Semestre 4</a>
+    <section id="manejo-de-sesiones">
+      <div id="galeria">
+        <img src=" alt="Imagen 1" />
+        <img src="img/Conexión a la BD (2).PNG" alt="Imagen 2" />
       </div>
     </section>
+    <script>
+      // JavaScript para cambiar automáticamente las imágenes cada 10 segundos
+      const galeria = document.getElementById("galeria");
+      const imagenes = galeria.getElementsByTagName("img");
+      let currentIndex = 0;
+
+      function cambiarImagen() {
+        imagenes[currentIndex].style.display = "none";
+        currentIndex = (currentIndex + 1) % imagenes.length;
+        imagenes[currentIndex].style.display = "block";
+      }
+
+      setInterval(cambiarImagen, 10000); // Cambiar imagen cada 10 segundos
+
+      galeria.addEventListener("click", () => {
+        cambiarImagen();
+      });
+    </script>
     <footer>
       <div class="container">
         <div class="footer-content">
           <div class="footer-logo">
-            <img src="gitimg/DNQ MOTOR BLANCO.png" alt="Logo de la empresa" />
+            <img src="img/DNQ MOTOR BLANCO.png" alt="Logo de la empresa" />
           </div>
         </div>
         <div class="footer-info">

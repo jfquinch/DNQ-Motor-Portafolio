@@ -10,6 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap"
       rel="stylesheet"
     />
+    <link rel="icon" href="img/DNQ-MOTOR-ROJO.ico" type="image/x-icon">
 
     <style>
       /* Estilos para el header */
@@ -180,6 +181,50 @@
     #galeria img:first-child {
       display: block;
     }
+    .galeria {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 500px; /* Ajusta el alto deseado */
+        padding-left: 365px;
+      }
+
+      .galeria img {
+        display: none;
+        max-height: 100%;
+        max-width: 100%;
+        
+      }
+    footer {
+        background-color: #333;
+        color: #fff;
+        padding: 20px 0;
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+
+      .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .footer-content {
+        display: flex;
+        align-items: center;
+      }
+
+      .footer-logo img {
+        width: 150px;
+        height: auto;
+        padding-left: 70px;
+      }
+
+      .footer-info {
+        border-left: 1px solid #fff; /* Línea vertical */
+        padding-left: 20px; /* Espacio entre la línea y el contenido */
+        padding-right: 800px;
+      }
     </style>
   </head>
   <body>
@@ -222,32 +267,51 @@
       </div>
     </section>
     <section id="manejo-de-sesiones">
-      
-      <div id="galeria">
-        <img src="img/Conexión a la BD (1).PNG" alt="Imagen 1" />
-        <img src="img/Conexión a la BD (2).PNG" alt="Imagen 2" />
-        <img src="img/Conexión a la BD (3).PNG" alt="Imagen 3" />
-        <img src="img/Conexión a la BD (4).PNG" alt="Imagen 4" />
-        <img src="img/Conexión a la BD (5).PNG" alt="Imagen 5" />
+      <div class="galeria">
+        <img src="img/Manejo de sesiones (1).PNG" alt="Imagen 1" />
+        <img src="img/Manejo de sesiones (2).PNG" alt="Imagen 2" />
+        <img src="img/Manejo de sesiones (3).PNG" alt="Imagen 2" />
+        <img src="img/Manejo de sesiones (4).PNG" alt="Imagen 2" />
+        <img src="img/Manejo de sesiones (5).PNG" alt="Imagen 2" />
+        <img src="img/Manejo de sesiones (6).PNG" alt="Imagen 2" />
+        <img src="img/Manejo de sesiones (7).PNG" alt="Imagen 2" />
       </div>
     </section>
     <script>
-      // JavaScript para cambiar automáticamente las imágenes cada 10 segundos
-      const galeria = document.getElementById("galeria");
-      const imagenes = galeria.getElementsByTagName("img");
-      let currentIndex = 0;
+      const galerias = document.querySelectorAll(".galeria");
 
-      function cambiarImagen() {
-        imagenes[currentIndex].style.display = "none";
-        currentIndex = (currentIndex + 1) % imagenes.length;
+      galerias.forEach((galeria) => {
+        const imagenes = galeria.getElementsByTagName("img");
+        let currentIndex = 0;
+
+        // Mostrar la primera imagen inmediatamente
         imagenes[currentIndex].style.display = "block";
-      }
 
-      setInterval(cambiarImagen, 10000); // Cambiar imagen cada 10 segundos
+        function cambiarImagen() {
+          imagenes[currentIndex].style.display = "none";
+          currentIndex = (currentIndex + 1) % imagenes.length;
+          imagenes[currentIndex].style.display = "block";
+        }
 
-      galeria.addEventListener("click", () => {
-        cambiarImagen();
+        setInterval(cambiarImagen, 10000);
+
+        galeria.addEventListener("click", () => {
+          cambiarImagen();
+        });
       });
     </script>
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <img src="img/DNQ MOTOR BLANCO.png" alt="Logo de la empresa" />
+          </div>
+        </div>
+        <div class="footer-info">
+          <p>&copy; 2023 DNQ Motor - Todos los derechos reservados</p>
+          <p>Dirección: Cra 39b # 29b-28 sur, Bogotá, Colombia</p>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
