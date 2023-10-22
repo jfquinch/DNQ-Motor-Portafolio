@@ -31,7 +31,6 @@
         margin: 0;
         padding: 0;
         background-color: #1a1a1a;
-
       }
       header {
         background-color: #333; /* Color de fondo del header */
@@ -212,6 +211,34 @@
         padding-left: 20px; /* Espacio entre la línea y el contenido */
         padding-right: 800px;
       }
+      #crud {
+        background-color: #262626;
+        color: #ffffff;
+        padding: 20px;
+        text-align: center;
+        padding-left: 100px;
+      }
+
+      #crud h1 {
+        font-size: 24px;
+        margin-bottom: 80px;
+      }
+
+      ol {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      li {
+        margin: 70px 0;
+        display: flex;
+        align-items: center;
+      }
+
+      li img {
+        margin-right: 1px;
+        max-width: 860px; /* Ajusta el tamaño máximo de las imágenes */
+      }
     </style>
   </head>
   <body>
@@ -233,15 +260,18 @@
         </div>
       </nav>
     </header>
-    <section id="objetivo-general">
-      <div id="columna-izquierda">
-        <h1>Semestre 3</h1>
-      </div>
-    </section>
+      <section id="objetivo-general">
+        <div id="columna-izquierda">
+          <h1>Semestre 3</h1>
+        </div>
+      </section>
     <section id="objetivos-especificos">
       <div id="objetivos-especificos-izq">
         <ol>
-          <li>En construcción :)</li>
+          <li>Conexión a la base de datos</li>
+          <li>CRUD</li>
+          <li>Documento IEEE</li>
+          <li>Diagrama de actividades</li>
         </ol>
       </div>
       <div id="objetivos-especificos-der">
@@ -257,6 +287,85 @@
         <img src="img/Conexión a la BD (5).PNG" alt="Imagen 5" />
       </div>
     </section>
+    <section id="objetivos-especificos">
+      <div id="objetivos-especificos-izq">
+        <h1 style="color: #ffffff; padding-left: 50px; font-size: 50px">
+          CRUD
+        </h1>
+      </div>
+      <div id="objetivos-especificos-der" style="padding-right: 100px">
+        <ol style="color: #ffffff">
+          <li>
+            C (Create - Crear): Esta operación se refiere a la creación de
+            nuevos registros o elementos de datos en una base de datos. Implica
+            la inserción de un nuevo registro con información específica en una
+            tabla de la base de datos.
+          </li>
+          <li>
+            R (Read - Leer): La operación "Read" se refiere a la recuperación de
+            datos existentes de una base de datos. Permite consultar y leer
+            registros o información almacenada en la base de datos. Es la
+            operación que se utiliza para recuperar información de la base de
+            datos y mostrarla en la interfaz de usuario.
+          </li>
+          <li>
+            U (Update - Actualizar): La operación "Update" implica la
+            modificación de datos existentes en la base de datos. Permite
+            cambiar la información en un registro específico sin tener que
+            eliminarlo y volver a crearlo.
+          </li>
+          <li>
+            D (Delete - Borrar): La operación "Delete" se utiliza para eliminar
+            registros o datos existentes de la base de datos. Permite eliminar
+            información que ya no es relevante o necesaria en la base de datos.
+          </li>
+        </ol>
+      </div>
+    </section>
+    <section id="crud">
+      <h1 style="padding-top: 80px; font-size: 40px;">CRUD Operations</h1>
+      <ol>
+        <li style="font-size: 30px;">
+          <img src="/img/crud (1).PNG" alt="Create" />
+          Create
+        </li>
+        <li style="font-size: 30px;">
+          <img src="/img/crud (2).PNG" alt="Read" />
+          Read
+        </li>
+        <li style="font-size: 30px;">
+          <img src="/img/crud (4).PNG" alt="Update" />
+          Update
+        </li>
+        <li style="font-size: 30px;">
+          <img src="img/delete.png" alt="Delete" />
+          <p style="padding-left: 480px;">Delete</p>
+        </li>
+      </ol>
+    </section>
+    <section id="IEEE">
+      <div id="objetivos-especificos-der">
+        <h1>IEEE</h1>
+      </div>
+      <div>
+        <object data="docs/IEEE.pdf" type="application/pdf" width="100%" height="600">
+          <!-- Enlace de respaldo en caso de que el navegador no pueda mostrar el PDF -->
+          <p>Tu navegador no puede mostrar este PDF. Puedes <a href="docs/IEEE.pdf">descargarlo aquí</a>.</p>
+        </object>
+      </div>
+    </section>
+    <section id="IEEE">
+      <div id="objetivos-especificos-der">
+        <h1>Diagrama de actividades</h1>
+      </div>
+      <div>
+        <object data="docs/LISTADO DE ACTIVIDADES DEFINITIVO.pdf" type="application/pdf" width="100%" height="600">
+          <!-- Enlace de respaldo en caso de que el navegador no pueda mostrar el PDF -->
+          <p>Tu navegador no puede mostrar este PDF. Puedes <a href="docs/LISTADO DE ACTIVIDADES DEFINITIVO.pdf">descargarlo aquí</a>.</p>
+        </object>
+      </div>
+    </section>
+
     <script>
       // JavaScript para cambiar automáticamente las imágenes cada 10 segundos
       const galeria = document.getElementById("galeria");
