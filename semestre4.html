@@ -32,6 +32,7 @@
         font-family: "Montserrat", sans-serif;
         margin: 0;
         padding: 0;
+        background-color: #1a1a1a;
       }
       header {
         background-color: #333; /* Color de fondo del header */
@@ -90,7 +91,7 @@
       }
 
       #columna-izquierda h1 {
-        font-size: 24px; /* Tamaño de fuente del encabezado */
+        font-size: 50px; /* Tamaño de fuente del encabezado */
         color: #ffffff; /* Color del texto del encabezado */
         background-color: #282828;
         padding-left: 70px;
@@ -186,7 +187,7 @@
         justify-content: center;
         align-items: center;
         height: 500px; /* Ajusta el alto deseado */
-        padding-left: 365px;
+        padding-left: 70px;
       }
 
       .galeria img {
@@ -224,6 +225,39 @@
         border-left: 1px solid #fff; /* Línea vertical */
         padding-left: 20px; /* Espacio entre la línea y el contenido */
         padding-right: 800px;
+      }
+      #reportes-excel {
+        max-width: 100%;
+        height: 200px;
+        padding-left: 50px;
+        padding-top: 0px;
+      }
+      #encriptacion {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 100px;
+        padding-top: 30px;
+        background-color: #1a1a1a;
+      }
+
+      #encriptacion h1 {
+        font-size: 24px;
+        color: #ffffff;
+        padding-left: 70px;
+        padding-right: 70px;
+      }
+
+      #encriptacion p {
+        font-size: 16px;
+        color: #ffffff;
+        padding-right: 90px;
+      }
+
+      #encriptacion img {
+        max-width: 100%;
+        max-height: 200px;
+        padding-right: 100px;
       }
     </style>
   </head>
@@ -270,12 +304,72 @@
       <div class="galeria">
         <img src="img/Manejo de sesiones (1).PNG" alt="Imagen 1" />
         <img src="img/Manejo de sesiones (2).PNG" alt="Imagen 2" />
-        <img src="img/Manejo de sesiones (3).PNG" alt="Imagen 2" />
-        <img src="img/Manejo de sesiones (4).PNG" alt="Imagen 2" />
-        <img src="img/Manejo de sesiones (5).PNG" alt="Imagen 2" />
-        <img src="img/Manejo de sesiones (6).PNG" alt="Imagen 2" />
-        <img src="img/Manejo de sesiones (7).PNG" alt="Imagen 2" />
+        <img src="img/Manejo de sesiones (3).PNG" alt="Imagen 3" />
+        <img src="img/Manejo de sesiones (4).PNG" alt="Imagen 4" />
+        <img src="img/Manejo de sesiones (5).PNG" alt="Imagen 5" />
+        <img src="img/Manejo de sesiones (6).PNG" alt="Imagen 6" />
+        <img src="img/Manejo de sesiones (7).PNG" alt="Imagen 7" />
       </div>
+    </section>
+    <section id="manejo-de-sesiones">
+      <div class="galeria">
+        <img src="img/Interfaz grafica (1).PNG" alt="Imagen 1" />
+        <img src="img/Interfaz grafica (2).PNG" alt="Imagen 2" />
+        <img src="img/Interfaz grafica (3).PNG" alt="Imagen 3" />
+        <img src="img/Interfaz grafica (4).PNG" alt="Imagen 4" />
+        <img src="img/Interfaz grafica (5).PNG" alt="Imagen 5" />
+        <img src="img/Interfaz grafica (6).PNG" alt="Imagen 6" />
+        <img src="img/Interfaz grafica (7).PNG" alt="Imagen 7" />
+        <img src="img/Interfaz grafica (8).PNG" alt="Imagen 8" />
+        <img src="img/Interfaz grafica (9).PNG" alt="Imagen 9" />
+      </div>
+    </section>
+    <section id="objetivos-especificos">
+      <div id="objetivos-especificos-izq">
+        <p style="color: rgb(255, 255, 255)">
+          Para llevar a cabo la generación de informes basados en los registros
+          y tablas almacenados en MySQL, empleamos el complemento de generación
+          y exportación de datos de MySQL a Excel. Este complemento se instala
+          de manera sencilla al ser parte integral de la estructura de
+          directorios de la aplicación. En este contexto, se definen secciones
+          que permiten importar datos y, simultáneamente, construir y gestionar
+          la interacción con la base de datos MySQL.
+        </p>
+        <p style="color: rgb(255, 255, 255)">
+          Una vez que hayamos exportado los datos desde MySQL a Excel, estaremos
+          en condiciones de generar tablas dinámicas y gráficos. Estas
+          herramientas nos proporcionarán una comprensión más profunda y
+          permitirán un análisis didáctico de cómo se relacionan e interactúan
+          los datos presentes en las tablas.
+        </p>
+      </div>
+      <div id="objetivos-especificos-der">
+        <h1>Generación de reportes de MySQL a Excel</h1>
+      </div>
+    </section>
+    <section id="objetivos-especificos">
+      <div id="objetivos-especificos-izq">
+        <img src="img/Database.png" alt="Database.png" id="reportes-excel" />
+      </div>
+      <div class="galeria">
+        <img src="img/MySQL for excel (1).PNG" alt="Imagen 1" />
+        <img src="img/MySQL for excel (2).PNG" alt="Imagen 1" />
+        <img src="img/MySQL for excel (3).PNG" alt="Imagen 1" />
+      </div>
+    </section>
+    <section id="encriptacion">
+      <h1>Encriptación</h1>
+      <p>
+        Spring Boot Security ofrece varios algoritmos de encriptación, siendo
+        BCrypt el que uso en el proyecto DNQ Motor. Cuando un usuario crea o
+        cambia su contraseña, esta se almacena cifrada en la base de datos.
+        Durante el inicio de sesión, Spring Boot Security compara la contraseña
+        proporcionada con la versión cifrada en la base de datos, lo que
+        garantiza la seguridad de las contraseñas. Además, se utiliza el
+        "salting" para agregar una capa adicional de seguridad, y las
+        contraseñas se actualizan de manera segura.
+      </p>
+      <img src="img/encriptacion.png" alt="Encriptación" />
     </section>
     <script>
       const galerias = document.querySelectorAll(".galeria");
@@ -293,7 +387,7 @@
           imagenes[currentIndex].style.display = "block";
         }
 
-        setInterval(cambiarImagen, 10000);
+        setInterval(cambiarImagen, 50000);
 
         galeria.addEventListener("click", () => {
           cambiarImagen();
