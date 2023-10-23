@@ -212,6 +212,54 @@
         padding-left: 20px; /* Espacio entre la línea y el contenido */
         padding-right: 800px;
       }
+      .section {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .image-gallery {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .section-item {
+            font-size: 18px;
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .section-item:not(:first-child) img {
+            margin-right: 10px;
+        }
+        .section1 {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .image-gallery1 img {
+            max-width: 400px;
+            height:auto;
+            margin: 10px;
+        }
+
+        .section-item1 {
+            font-size: 18px;
+            margin: 10px 0;
+        }
     </style>
   </head>
   <body>
@@ -241,19 +289,39 @@
     <section id="objetivos-especificos">
       <div id="objetivos-especificos-izq">
         <ol>
-          <li>En construcción :)</li>
+          <li>Diseño e implementación de la BD del proyecto</li>
+          <li>Diccionario de datos</li>
+          <li>Modelo relacional de la BD del proyecto</li>
         </ol>
       </div>
       <div id="objetivos-especificos-der">
         <h1>Criterios de evaluación</h1>
       </div>
     </section>
-    <section id="manejo-de-sesiones">
-      <div id="galeria">
-        <img src=" alt="Imagen 1" />
-        <img src="img/Conexión a la BD (2).PNG" alt="Imagen 2" />
+    <section class="section">
+      <div class="image-gallery">
+          <img src="img/Tabla 1.png" alt="Imagen 1" style="max-width: 300px; margin: 10px;">
+          <img src="img/Tabla 2.png" alt="Imagen 2" style="max-width: 300px; margin: 10px;">
+      </div>
+      <div class="section-item">
+          1. Diseño e implementación de la BD del proyecto
       </div>
     </section>
+    <section class="section1">
+      <div class="image-gallery1">
+          <img src="img/Diccionario de datos DNQ.png" alt="Imagen 1" style="max-width: 300px; margin: 10px;">
+      <div class="section-item1">
+          2. Diccionario de datos
+      </div>
+    </section>
+    <section class="section1">
+      <div class="image-gallery1">
+          <img src="img/modelo relacional dnq.png" alt="Imagen 1" style="max-width: 300px; margin: 10px;">
+      <div class="section-item1">
+          3. Modelo relacional de la BD del proyecto
+      </div>
+    </section>
+    
     <script>
       // JavaScript para cambiar automáticamente las imágenes cada 10 segundos
       const galeria = document.getElementById("galeria");
@@ -284,6 +352,7 @@
           <p>Dirección: Cra 39b # 29b-28 sur, Bogotá, Colombia</p>
         </div>
       </div>
+      
     </footer>
   </body>
 </html>
